@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register as a client on ProServiceFinder to find trusted professionals for all your service needs.">
+    <title>Client Registration | ProServiceFinder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">ProService<span>Finder</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="admin.html" class="admin-link">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='providers.html'" class="btn primary">Register as Provider</button>
+                <button onclick="window.location.href='clients.html'" class="btn secondary">Register as Client</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="registration-container">
+            <h2>Client Registration</h2>
+            <form id="clientForm" class="registration-form">
+                <div class="form-group">
+                    <label for="clientRegDate">Date of Registration</label>
+                    <input type="date" id="clientRegDate" name="regDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="clientName">Full Name</label>
+                    <input type="text" id="clientName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="clientMobile">Mobile Number</label>
+                    <input type="tel" id="clientMobile" name="mobile" pattern="[0-9]{10}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="clientAadhaar">Aadhaar Number</label>
+                    <input type="text" id="clientAadhaar" name="aadhaar" pattern="[0-9]{12}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="clientLocation">Location</label>
+                    <input type="text" id="clientLocation" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="clientPincode">Pincode</label>
+                    <input type="text" id="clientPincode" name="pincode" pattern="[0-9]{6}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="clientLandmark">Nearest Landmark</label>
+                    <input type="text" id="clientLandmark" name="landmark" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="clientAddress">Full Address</label>
+                    <textarea id="clientAddress" name="address" required></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label>Services Interested In (Select all that apply)</label>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px;">
+                        <label><input type="checkbox" name="services[]" value="carpentry"> Carpentry</label>
+                        <label><input type="checkbox" name="services[]" value="plumbing"> Plumbing</label>
+                        <label><input type="checkbox" name="services[]" value="electrical"> Electrical</label>
+                        <label><input type="checkbox" name="services[]" value="cleaning"> Cleaning</label>
+                        <label><input type="checkbox" name="services[]" value="driving"> Driving</label>
+                        <label><input type="checkbox" name="services[]" value="gardening"> Gardening</label>
+                        <label><input type="checkbox" name="services[]" value="painting"> Painting</label>
+                        <label><input type="checkbox" name="services[]" value="mechanic"> Mechanic</label>
+                        <label><input type="checkbox" name="services[]" value="other"> Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-submit">
+                    <button type="submit" class="btn primary">Register as Client</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>ProServiceFinder</h3>
+                    <p>Connecting clients with trusted professionals since 2023. Our mission is to make finding quality services easy and reliable.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="providers.html">Provider Registration</a></li>
+                        <li><a href="clients.html">Client Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ProServiceFinder. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set today's date as default registration date
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('clientRegDate').value = today;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin dashboard for ProServiceFinder to manage service providers and clients.">
+    <title>Admin Dashboard | ProServiceFinder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">ProService<span>Finder</span> Admin</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">View Site</a></li>
+                    <li><a href="providers.html">Provider Registration</a></li>
+                    <li><a href="clients.html">Client Registration</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn secondary">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="admin-container">
+            <div class="admin-header">
+                <h2>Dashboard</h2>
+                <div>
+                    <button class="btn primary">Refresh Data</button>
+                </div>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-btn active">Service Providers</button>
+                <button class="tab-btn">Clients</button>
+            </div>
+            
+            <div class="tab-content active">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Reg Date</th>
+                            <th>Name</th>
+                            <th>Mobile</th>
+                            <th>Aadhaar</th>
+                            <th>Location</th>
+                            <th>Category</th>
+                            <th>Subcategory</th>
+                            <th>Experience</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023-06-15</td>
+                            <td>Rajesh Kumar</td>
+                            <td>9876543210</td>
+                            <td>123456789012</td>
+                            <td>Delhi</td>
+                            <td>Carpenter</td>
+                            <td>Furniture Making</td>
+                            <td>5 years</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-14</td>
+                            <td>Mohan Singh</td>
+                            <td>8765432109</td>
+                            <td>234567890123</td>
+                            <td>Mumbai</td>
+                            <td>Plumber</td>
+                            <td>Pipe Repairs</td>
+                            <td>8 years</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-13</td>
+                            <td>Priya Sharma</td>
+                            <td>7654321098</td>
+                            <td>345678901234</td>
+                            <td>Bangalore</td>
+                            <td>Cleaner</td>
+                            <td>Home Cleaning</td>
+                            <td>3 years</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-12</td>
+                            <td>Vikram Patel</td>
+                            <td>6543210987</td>
+                            <td>456789012345</td>
+                            <td>Hyderabad</td>
+                            <td>Driver</td>
+                            <td>Personal Driver</td>
+                            <td>10 years</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-11</td>
+                            <td>Anita Gupta</td>
+                            <td>5432109876</td>
+                            <td>567890123456</td>
+                            <td>Chennai</td>
+                            <td>Gardener</td>
+                            <td>Landscaping</td>
+                            <td>7 years</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn primary export-btn" data-type="providers">Export Providers Data</button>
+            </div>
+            
+            <div class="tab-content">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Reg Date</th>
+                            <th>Name</th>
+                            <th>Mobile</th>
+                            <th>Aadhaar</th>
+                            <th>Location</th>
+                            <th>Landmark</th>
+                            <th>Interested Services</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023-06-15</td>
+                            <td>Amit Desai</td>
+                            <td>9876543210</td>
+                            <td>123456789012</td>
+                            <td>Delhi</td>
+                            <td>Near Metro Station</td>
+                            <td>Carpentry, Plumbing</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-14</td>
+                            <td>Neha Reddy</td>
+                            <td>8765432109</td>
+                            <td>234567890123</td>
+                            <td>Mumbai</td>
+                            <td>Opposite Mall</td>
+                            <td>Cleaning, Gardening</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-13</td>
+                            <td>Rahul Verma</td>
+                            <td>7654321098</td>
+                            <td>345678901234</td>
+                            <td>Bangalore</td>
+                            <td>Near Park</td>
+                            <td>Electrical, Driving</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-12</td>
+                            <td>Sonia Kapoor</td>
+                            <td>6543210987</td>
+                            <td>456789012345</td>
+                            <td>Hyderabad</td>
+                            <td>Main Road</td>
+                            <td>Painting, Plumbing</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-11</td>
+                            <td>Arun Joshi</td>
+                            <td>5432109876</td>
+                            <td>567890123456</td>
+                            <td>Chennai</td>
+                            <td>Near Hospital</td>
+                            <td>Mechanic, Electrical</td>
+                            <td>
+                                <button class="btn small">View</button>
+                                <button class="btn small secondary">Edit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn primary export-btn" data-type="clients">Export Clients Data</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>ProServiceFinder Admin</h3>
+                    <p>Admin dashboard for managing service providers and clients.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">View Site</a></li>
+                        <li><a href="providers.html">Provider Registration</a></li>
+                        <li><a href="clients.html">Client Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ProServiceFinder. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

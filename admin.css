@@ -1,0 +1,44 @@
+/* Admin-specific styles that override or extend the main styles */
+
+/* Small button style */
+.btn.small {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+/* Table actions */
+.data-table td:last-child {
+    display: flex;
+    gap: 5px;
+}
+
+/* Tab content animations */
+.tab-content {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Admin header specific styles */
+.admin-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .data-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

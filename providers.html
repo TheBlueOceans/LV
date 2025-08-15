@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register as a professional service provider on ProServiceFinder. Offer your skills in carpentry, plumbing, cleaning, driving and more.">
+    <title>Service Provider Registration | ProServiceFinder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">ProService<span>Finder</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="admin.html" class="admin-link">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='providers.html'" class="btn primary">Register as Provider</button>
+                <button onclick="window.location.href='clients.html'" class="btn secondary">Register as Client</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="registration-container">
+            <h2>Service Provider Registration</h2>
+            <form id="providerForm" class="registration-form">
+                <div class="form-group">
+                    <label for="regDate">Date of Registration</label>
+                    <input type="date" id="regDate" name="regDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="aadhaar">Aadhaar Number</label>
+                    <input type="text" id="aadhaar" name="aadhaar" pattern="[0-9]{12}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pincode">Pincode</label>
+                    <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Main Work Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="carpenter">Carpenter</option>
+                        <option value="plumber">Plumber</option>
+                        <option value="electrician">Electrician</option>
+                        <option value="cleaner">Cleaner</option>
+                        <option value="driver">Driver</option>
+                        <option value="gardener">Gardener</option>
+                        <option value="painter">Painter</option>
+                        <option value="mechanic">Mechanic</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subcategory">Sub Category</label>
+                    <select id="subcategory" name="subcategory" required>
+                        <option value="">Select Subcategory</option>
+                        <!-- Subcategories will be populated by JavaScript based on main category -->
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" id="experience" name="experience" min="0" max="50" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="skills">Skills Description</label>
+                    <textarea id="skills" name="skills" required></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="availability">Availability</label>
+                    <div style="display: flex; gap: 20px;">
+                        <label><input type="checkbox" name="availability[]" value="fulltime"> Full Time</label>
+                        <label><input type="checkbox" name="availability[]" value="parttime"> Part Time</label>
+                        <label><input type="checkbox" name="availability[]" value="weekends"> Weekends</label>
+                        <label><input type="checkbox" name="availability[]" value="emergency"> Emergency Services</label>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="photo">Upload Photo (Optional)</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="idProof">Upload ID Proof (Required)</label>
+                    <input type="file" id="idProof" name="idProof" accept="image/*,.pdf" required>
+                </div>
+                
+                <div class="form-submit">
+                    <button type="submit" class="btn primary">Register as Provider</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>ProServiceFinder</h3>
+                    <p>Connecting clients with trusted professionals since 2023. Our mission is to make finding quality services easy and reliable.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="providers.html">Provider Registration</a></li>
+                        <li><a href="clients.html">Client Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ProServiceFinder. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set today's date as default registration date
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('regDate').value = today;
+            
+            // Category-subcategory mapping
+            const categories = {
+                carpenter: ['Furniture Making', 'Repairs', 'Installations', 'Custom Work'],
+                plumber: ['Pipe Repairs', 'Bathroom Fittings', 'Water Tank', 'Leakage', 'Installations'],
+                electrician: ['Wiring', 'Repairs', 'Installations', 'Maintenance', 'Safety Checks'],
+                cleaner: ['Home Cleaning', 'Office Cleaning', 'Deep Cleaning', 'Post-Construction'],
+                driver: ['Personal Driver', 'Taxi Service', 'Truck Driver', 'Delivery'],
+                gardener: ['Landscaping', 'Lawn Care', 'Tree Services', 'Plantation'],
+                painter: ['Wall Painting', 'Interior', 'Exterior', 'Texture', 'Waterproofing'],
+                mechanic: ['Car Mechanic', 'Bike Mechanic', 'AC Repair', 'Appliance Repair'],
+                other: ['Other Services']
+            };
+            
+            // Populate subcategories based on main category selection
+            const categorySelect = document.getElementById('category');
+            const subcategorySelect = document.getElementById('subcategory');
+            
+            categorySelect.addEventListener('change', function() {
+                const selectedCategory = this.value;
+                subcategorySelect.innerHTML = '<option value="">Select Subcategory</option>';
+                
+                if (selectedCategory && categories[selectedCategory]) {
+                    categories[selectedCategory].forEach(function(subcat) {
+                        const option = document.createElement('option');
+                        option.value = subcat.toLowerCase().replace(' ', '-');
+                        option.textContent = subcat;
+                        subcategorySelect.appendChild(option);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
